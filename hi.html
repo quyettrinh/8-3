@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>QR 8/3</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  font-family: Arial;
+  flex-direction: column;
+}
+
+#qrcode {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+</style>
+</head>
+<body>
+
+<h2>💖 Quét QR để xem điều bất ngờ 💖</h2>
+<div id="qrcode"></div>
+
+<script>
+
+// 👇 SAU KHI UPLOAD LÊN MẠNG → sửa link này
+const websiteURL = ;
+
+new QRCode(document.getElementById("qrcode"), {
+  text: websiteURL,
+  width: 220,
+  height: 220
+});
+
+</script>
+
+</body>
+</html>
