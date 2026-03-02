@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>QR 8/3</title>
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
 <style>
 body {
   display: flex;
@@ -27,21 +27,17 @@ body {
 <h2>💖 Quét QR để xem điều bất ngờ 💖</h2>
 <div id="qrcode"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+
 <script>
+const url = "https://quyettrinh.github.io/8-3/8.3.html";
 
-// 👇 SAU KHI UPLOAD LÊN MẠNG → sửa link này
-const websiteURL = https://quyettrinh.github.io/8-3/8.3.html ;
-
-new QRCode(document.getElementById("qrcode"), {
-  text: websiteURL,
-  width: 220,
-  height: 220
+QRCode.toCanvas(document.getElementById("qrcode"), url, {
+  width: 220
+}, function (error) {
+  if (error) console.error(error);
 });
-
 </script>
 
 </body>
-
 </html>
-
-
